@@ -1,5 +1,9 @@
 # Element
 
+:::tip Authoritative document
+This page is for junior users. If you want to know more, please see [FastjsDom](./dom.html) and [FastjsDomList](./domlist.html).
+:::
+
 ## Create Element
 
 ```javascript
@@ -27,6 +31,18 @@ import { selecter as $ } from 'fastjs-next';
 
 console.log($("body").html()); // <h1>Hello World</h1>
 ```
+
+## Set value
+
+Use `val` to set or get the value of the `input`, `textarea` and `button` element.
+
+```javascript
+import { selecter as $ } from 'fastjs-next';
+
+$("input").val("Hello World");
+console.log($("input").val()); // Hello World
+```
+
 
 ## Set attribute
 
@@ -135,6 +151,10 @@ div.addFirst($("body").el());
 
 ## Access element
 
+:::tip
+You can also use `el(index)` to get the element.
+:::
+
 Use `get(index)` or `set(index, value)` to operate element.
 
 ```javascript
@@ -146,13 +166,13 @@ console.log($("body").get("innerHTML")); // <h1>Hello World</h1>
 
 ## Get Parent
 
-Use `parent()` to get the parent of the element.
+Use `father()` to get the parent of the element.
 
 ```javascript
 import { selecter as $ } from 'fastjs-next';
 
 $("body").html("<div></div>");
-console.log($("div").parent()); // FastjsDom -> body
+console.log($("div").father()); // FastjsDom -> body
 ```
 
 ## Get Child
@@ -169,4 +189,34 @@ import { selecter as $ } from 'fastjs-next';
 $("body").html("<span></span><div></div>");
 console.log($("body").first()); // FastjsDom -> span
 console.log($("body").last()); // FastjsDom -> div
+```
+
+## Focus
+
+Use `focus()` to focus input element.
+
+:::warning
+It only work on FastjsDom.
+:::
+
+```javascript
+import { selecter as $ } from 'fastjs-next';
+
+$("input")[0].focus();
+```
+## Demo
+
+### Create and push to body
+
+```javascript
+import { FastjsDom } from 'fastjs-next';
+
+let div = new FastjsDom("div");
+div.html("Hello World")
+   .css({
+       "color": "green",
+       "font-size": "20px",
+       "font-weight": "bold"
+   })
+   .appendTo();
 ```

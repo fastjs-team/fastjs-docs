@@ -1,4 +1,4 @@
-# Array <Badge type="warning" text="^1.0.11" />
+# Array <Badge type="warning" text="v1.0.11" />
 
 :::tip Strong FastjsArray
 FastjsArray's type check can use without typescript, it also has a lot of useful methods.

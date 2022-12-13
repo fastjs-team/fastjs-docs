@@ -6,6 +6,10 @@ const introduction = {
       "link": "/"
     },
     {
+      "text": "Version List",
+      "link": "/guide/version-list"
+    },
+    {
       "text": "Getting Started",
       "link": "/guide/getting-started"
     },
@@ -20,7 +24,7 @@ const contribute = {
   "text": "Contribute",
   "items": [
     {
-      "text": "Sponsor",
+      "text": "Become a Sponsor",
       "link": "/contribute/sponsor"
     },
     {
@@ -61,6 +65,14 @@ export default {
         {
           "text": "Element",
           "link": "/v1.x/element"
+        },
+        {
+          "text": "Dom",
+          "link": "/v1.x/dom"
+        },
+        {
+          "text": "DomList",
+          "link": "/v1.x/domlist"
         },
         {
           "text": "Array",
