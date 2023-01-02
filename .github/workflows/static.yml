@@ -30,6 +30,8 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
+        with:
+          branch: main
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -38,3 +40,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          branch: main
